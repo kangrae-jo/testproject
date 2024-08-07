@@ -1,10 +1,11 @@
-package com.kng.testproject.service;
+package com.kng.testproject.service.impl;
 
 
 import com.kng.testproject.data.dto.ProductDto;
 import com.kng.testproject.data.entity.Product;
 import com.kng.testproject.data.handler.ProductDataHandler;
 
+import com.kng.testproject.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

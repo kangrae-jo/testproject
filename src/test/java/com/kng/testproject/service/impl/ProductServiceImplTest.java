@@ -2,7 +2,6 @@ package com.kng.testproject.service.impl;
 
 import com.kng.testproject.data.dto.ProductDto;
 import com.kng.testproject.data.handler.impl.ProductDataHandlerImpl;
-import com.kng.testproject.service.ProductServiceImpl;
 import com.kng.testproject.data.entity.Product;
 
 

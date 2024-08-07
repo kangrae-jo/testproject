@@ -16,12 +16,15 @@ public class ProductDto {
     @NotNull
     //@size(min = 8, max = 8)
     private String productId;
+
     @NotNull
     private String productName;
+
     @NotNull
     @Min(value = 500)
     @Max(value = 3000000)
     private int productPrice;
+
     @NotNull
     @Min(value = 0)
     @Max(value = 9999)

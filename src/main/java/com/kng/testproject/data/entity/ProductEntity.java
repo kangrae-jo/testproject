@@ -13,7 +13,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @Table(name = "product")
-public class Product {
+public class ProductEntity {
 
     @Id
     String productId;

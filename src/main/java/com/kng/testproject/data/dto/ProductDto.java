@@ -1,6 +1,6 @@
 package com.kng.testproject.data.dto;
 
-import com.kng.testproject.data.entity.Product;
+import com.kng.testproject.data.entity.ProductEntity;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
@@ -30,8 +30,8 @@ public class ProductDto {
     @Max(value = 9999)
     private int productStock;
 
-    public Product toEntity(){
-        return Product.builder()
+    public ProductEntity toEntity(){
+        return ProductEntity.builder()
                 .productId(productId)
                 .productName(productName)
                 .productPrice(productPrice)

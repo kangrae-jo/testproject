@@ -2,7 +2,7 @@ package com.kng.testproject.service.impl;
 
 import com.kng.testproject.data.dto.ProductDto;
 import com.kng.testproject.data.handler.impl.ProductDataHandlerImpl;
-import com.kng.testproject.data.entity.Product;
+import com.kng.testproject.data.entity.ProductEntity;
 
 
 import org.junit.jupiter.api.Assertions;
@@ -33,7 +33,7 @@ public class ProductServiceImplTest {
     public void getProductTest() {
         // given
         Mockito.when(productDataHandler.getProductEntity("123"))
-                .thenReturn(new Product("123", "pen", 2000, 3000));
+                .thenReturn(new ProductEntity("123", "pen", 2000, 3000));
 
         ProductDto productDto = productService.getProduct("123");
 
@@ -49,7 +49,7 @@ public class ProductServiceImplTest {
     public void saveProductTest() {
         // given
         Mockito.when(productDataHandler.saveProductEntity("123", "pen", 2000, 3000))
-                .thenReturn(new Product("123", "pen", 2000, 3000));
+                .thenReturn(new ProductEntity("123", "pen", 2000, 3000));
 
         ProductDto productDto = productService.saveProduct("123", "pen", 2000, 3000);
 

@@ -1,10 +1,10 @@
 package com.kng.testproject.data.handler;
 
-import com.kng.testproject.data.entity.Product;
+import com.kng.testproject.data.entity.ProductEntity;
 
 public interface ProductDataHandler {
 
-    Product saveProductEntity(String productId, String productName, int productPrice, int productStock);
+    ProductEntity saveProductEntity(String productId, String productName, int productPrice, int productStock);
 
-    Product getProductEntity(String productId);
+    ProductEntity getProductEntity(String productId);
 }

@@ -1,10 +1,10 @@
 package com.kng.testproject.data.dao;
 
-import com.kng.testproject.data.entity.Product;
+import com.kng.testproject.data.entity.ProductEntity;
 
 public interface ProductDAO {
 
-    Product saveProduct(Product product);
+    ProductEntity saveProduct(ProductEntity product);
 
-    Product getProduct(String productId);
+    ProductEntity getProduct(String productId);
 }

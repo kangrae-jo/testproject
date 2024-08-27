@@ -2,7 +2,7 @@ package com.kng.testproject.service.impl;
 
 
 import com.kng.testproject.data.dto.ProductDto;
-import com.kng.testproject.data.entity.Product;
+import com.kng.testproject.data.entity.ProductEntity;
 import com.kng.testproject.data.handler.ProductDataHandler;
 
 import com.kng.testproject.service.ProductService;
@@ -21,7 +21,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDto saveProduct(String productId, String productName, int productPrice, int productStock){
-        Product product = productDataHandler.saveProductEntity(productId,productName,productPrice,productStock);
+        ProductEntity product = productDataHandler.saveProductEntity(productId,productName,productPrice,productStock);
 
         ProductDto productDto = new ProductDto(product.getProductId(),
                 product.getProductName(), product.getProductPrice(), product.getProductStock());
@@ -31,7 +31,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDto getProduct(String productId){
-        Product product = productDataHandler.getProductEntity(productId);
+        ProductEntity product = productDataHandler.getProductEntity(productId);
 
         ProductDto productDto = new ProductDto(product.getProductId(),
                 product.getProductName(), product.getProductPrice(), product.getProductStock());

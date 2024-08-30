@@ -1,7 +1,7 @@
 package com.kng.testproject.data.handler.impl;
 
 import com.kng.testproject.data.dao.ProductDAO;
-import com.kng.testproject.data.entity.ProductEntity;
+import com.kng.testproject.data.entity.Product;
 import com.kng.testproject.data.handler.ProductDataHandler;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +19,14 @@ public class ProductDataHandlerImpl implements ProductDataHandler {
     }
 
     @Override
-    public ProductEntity saveProductEntity(String productId, String productName, int productPrice, int productStock){
-        ProductEntity product = new ProductEntity(productId, productName, productPrice, productStock);
+    public Product saveProductEntity(String productId, String productName, int productPrice, int productStock){
+        Product product = new Product(productId, productName, productPrice, productStock);
 
         return productDAO.saveProduct(product);
     }
 
     @Override
-    public ProductEntity getProductEntity(String productId) {
+    public Product getProductEntity(String productId) {
         return productDAO.getProduct(productId);
     }
 }

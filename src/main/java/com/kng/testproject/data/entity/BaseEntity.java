@@ -29,7 +29,8 @@ public class BaseEntity {
     private String createdBy;
     */
 
-    @LastModifiedDate private LocalDateTime updatedAt;
+    @LastModifiedDate
+    private LocalDateTime updatedAt;
 
      /*
     @LastModifiedBy

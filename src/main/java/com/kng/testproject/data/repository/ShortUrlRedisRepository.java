@@ -1,4 +1,8 @@
 package com.kng.testproject.data.repository;
 
-public interface ShortUrlRedisRepository {
+import com.kng.testproject.data.dto.ShortUrlResponseDto;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ShortUrlRedisRepository extends CrudRepository<ShortUrlResponseDto, String> {
 }

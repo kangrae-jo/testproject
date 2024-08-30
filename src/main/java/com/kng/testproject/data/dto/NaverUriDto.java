@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @Builder
-public class NaverUrlDto {
+public class NaverUriDto {
     private String messages;
     private String code;
     private String result;

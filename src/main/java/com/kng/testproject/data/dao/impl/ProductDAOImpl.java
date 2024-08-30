@@ -1,7 +1,7 @@
 package com.kng.testproject.data.dao.impl;
 
 import com.kng.testproject.data.dao.ProductDAO;
-import com.kng.testproject.data.entity.ProductEntity;
+import com.kng.testproject.data.entity.Product;
 import com.kng.testproject.data.repository.ProductRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +20,14 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
-    public ProductEntity saveProduct(ProductEntity product) {
+    public Product saveProduct(Product product) {
         productRepository.save(product);
         return product;
     }
 
     @Override
-    public ProductEntity getProduct(String productId) {
-        Optional<ProductEntity> productEntity = productRepository.findById(productId);
+    public Product getProduct(String productId) {
+        Optional<Product> productEntity = productRepository.findById(productId);
         return productEntity.orElse(null);
     }
 }
